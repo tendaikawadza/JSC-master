@@ -12,7 +12,7 @@ import Inventory.Management.Service.ProductService;
 @RequestMapping(path ="api/v1/product")
 public class ProductController {
 
-	@Autowired
+
 	private final ProductService  productService;
 
 	public ProductController(ProductService productService) {
@@ -33,8 +33,6 @@ public class ProductController {
 
 
   }
-
-
 
 @DeleteMapping(path="{productId}")
 public void deleteStudent(@PathVariable("productId")Long id){

@@ -1,36 +1,36 @@
 package Inventory.Management.Entity;
 
-
 import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.*;
 
 @Entity
-
 @Table(name="product")
-
-
 public class Product  implements Serializable {
 
 	@Id
 	@SequenceGenerator(
 			name="product_sequence",
-			sequenceName = "product_sequence",
+			sequenceName = "product",
 			allocationSize = 1
 
 	)
 
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+
+
+  @Column(nullable = false,updatable = false)
 	private Long productId;
+	@Column(name="product_name",nullable = false)
+	private String productName;
+
 	private LocalDate date;
 	private String productCode;
-	private String productName;
 
 	private int reorderLevel;
 	private int Quantity;
 	private String Sensitivity;
-
 	public Product() {
 	}
 
