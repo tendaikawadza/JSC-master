@@ -36,19 +36,19 @@ public class ProductConfig {
 
                        );
 
-                 Product STAMPLES  =       new Product(
+                 Product  tick =       new Product(
 
                          LocalDate.of(2000,Month.APRIL,9),
                          "Critical",
                          "45454545",
-                         80,
-                         70,
+                         800,
+                         77,
                          "Critical"
 
 
                  );                 repository.saveAll(
 
-                           List.of(Bond)
+                           List.of(Bond,tick)
                    );
 
 

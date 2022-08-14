@@ -12,7 +12,7 @@ public class Product  implements Serializable {
 	@Id
 	@SequenceGenerator(
 			name="product_sequence",
-			sequenceName = "product",
+			sequenceName = "product_sequence",
 			allocationSize = 1
 
 	)

@@ -12,4 +12,6 @@ import Inventory.Management.Entity.Product;
 public interface ProductRepository  extends JpaRepository   <Product,Long> {
 
 
+
+
 }
