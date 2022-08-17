@@ -47,6 +47,7 @@ productService.deleteProduct(productId);
 @PutMapping(path ="{prouctId}" )
         public void   updateProduct(
                 @PathVariable("productId") Long   productId,
+                @RequestParam (required=false) String productName,
                 @RequestParam (required=false) LocalDate date  ,
                 @RequestParam (required=false) String productCode,
                 @RequestParam (required=false) int reorderLevel,
@@ -57,7 +58,7 @@ productService.deleteProduct(productId);
 {
 
 
-            productService.updateProduct(productId,date,productCode,reorderLevel,Quantity,Sensitivity);
+            productService.updateProduct(productId,productName,date,productCode,reorderLevel,Quantity,Sensitivity);
 
 
     }
